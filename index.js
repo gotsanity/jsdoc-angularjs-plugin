@@ -8,7 +8,7 @@
 'use strict';
 
 // const authenticationTag = require('./lib/authentication');
-const ngmoduleTag = require('./lib/ngController');
+const ngControllerTag = require('./lib/ngController');
 // const bodyParameterTag = require('./lib/bodyparam');
 // const headerParameterTag = require('./lib/headerparam');
 // const queryParameterTag = require('./lib/queryparam');
