@@ -8,7 +8,7 @@
 'use strict';
 
 // const authenticationTag = require('./lib/authentication');
-const ngmoduleTag = require('./lib/ngmodule');
+const ngmoduleTag = require('./lib/ngController');
 // const bodyParameterTag = require('./lib/bodyparam');
 // const headerParameterTag = require('./lib/headerparam');
 // const queryParameterTag = require('./lib/queryparam');
@@ -16,7 +16,7 @@ const ngmoduleTag = require('./lib/ngmodule');
 
 exports.defineTags = function(dictionary) {
   // dictionary.defineTag(authenticationTag.name, authenticationTag.options);
-  dictionary.defineTag(ngmoduleTag.name, ngmoduleTag.options);
+  dictionary.defineTag(ngControllerTag.name, ngControllerTag.options);
   // dictionary.defineTag(bodyParameterTag.name, bodyParameterTag.options);
 };
 
@@ -24,6 +24,6 @@ exports.handlers = {
   newDoclet: function(e) {
     // authenticationTag.newDocletHandler(e);
     // bodyParameterTag.newDocletHandler(e);
-    ngmoduleTag.newDocletHandler(e);
+    ngControllerTag.newDocletHandler(e);
   }
 }
