@@ -3,22 +3,8 @@
   "version": "0.0.1",
   "description": "Plugin to add custom angular.js tags for documenting angular.js front-ends.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo 'boo on me I have no tests.'",
-    "clean": "rm -rf ./out/*;",
-    "example1": "rm -rf ./out/*; ./node_modules/.bin/jsdoc -c ./examples/jsdoc.conf --readme ./examples/README.md; true"
-  },
-  "keywords": [
-    "jsdoc",
-    "documentation",
-    "angular",
-    "plugin"
-  ],
   "engines": {
     "node": ">=4.6.2"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
   },
   "author": "Jesse Harlan",
   "license": "MIT",
