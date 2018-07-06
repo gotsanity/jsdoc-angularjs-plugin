@@ -1,33 +1,29 @@
 /**
- * This module defines custom JDOC tags for documenting Express routes.
- * @module jsdoc-route-plugin
+ * This module defines custom JDOC tags for documenting Angular.js Projects.
+ * This was developed using the jsdoc-route-plugin at https://github.com/bvanderlaan/jsdoc-route-plugin as a guide. 
+ * @module jsdoc-angularjs-plugin
+ * @author Jesse Harlan
  */
 
 'use strict';
 
-const authenticationTag = require('./lib/authentication');
-const routeTag = require('./lib/route');
-const bodyParameterTag = require('./lib/bodyparam');
-const headerParameterTag = require('./lib/headerparam');
-const queryParameterTag = require('./lib/queryparam');
-const routeParameterTag = require('./lib/routeparam');
+// const authenticationTag = require('./lib/authentication');
+const ngmoduleTag = require('./lib/ngmodule');
+// const bodyParameterTag = require('./lib/bodyparam');
+// const headerParameterTag = require('./lib/headerparam');
+// const queryParameterTag = require('./lib/queryparam');
+// const routeParameterTag = require('./lib/routeparam');
 
 exports.defineTags = function(dictionary) {
-  dictionary.defineTag(authenticationTag.name, authenticationTag.options);
-  dictionary.defineTag(routeTag.name, routeTag.options);
-  dictionary.defineTag(bodyParameterTag.name, bodyParameterTag.options);
-  dictionary.defineTag(headerParameterTag.name, headerParameterTag.options);
-  dictionary.defineTag(queryParameterTag.name, queryParameterTag.options);
-  dictionary.defineTag(routeParameterTag.name, routeParameterTag.options);
+  // dictionary.defineTag(authenticationTag.name, authenticationTag.options);
+  dictionary.defineTag(ngmoduleTag.name, ngmoduleTag.options);
+  // dictionary.defineTag(bodyParameterTag.name, bodyParameterTag.options);
 };
 
 exports.handlers = {
   newDoclet: function(e) {
-    authenticationTag.newDocletHandler(e);
-    bodyParameterTag.newDocletHandler(e);
-    headerParameterTag.newDocletHandler(e);
-    queryParameterTag.newDocletHandler(e);
-    routeParameterTag.newDocletHandler(e);
-    routeTag.newDocletHandler(e);
+    // authenticationTag.newDocletHandler(e);
+    // bodyParameterTag.newDocletHandler(e);
+    ngmoduleTag.newDocletHandler(e);
   }
 }
